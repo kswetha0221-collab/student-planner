@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Planner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <div>
+      <p class="eyebrow">STAY ORGANIZED • REACH YOUR GOALS</p>
+      <h1>My Student Planner</h1>
+      <p>Plan your day, track your tasks, and make time for learning.</p>
+    </div>
+    <div class="date-card">
+      <span>Today</span>
+      <strong id="today"></strong>
+    </div>
+  </header>
+
+  <main>
+    <section class="stats" aria-label="Task summary">
+      <article class="stat"><span>Total tasks</span><strong id="totalCount">0</strong></article>
+      <article class="stat"><span>Completed</span><strong id="doneCount">0</strong></article>
+      <article class="stat"><span>Pending</span><strong id="pendingCount">0</strong></article>
+    </section>
+
+    <section class="panel">
+      <div class="section-heading">
+        <div><p class="eyebrow">YOUR TO-DO LIST</p><h2>Plan your tasks</h2></div>
+      </div>
+      <form id="taskForm">
+        <label for="taskInput">Task name</label>
+        <input id="taskInput" type="text" placeholder="e.g. Revise mathematics" required maxlength="100">
+        <div class="form-row">
+          <div>
+            <label for="subjectInput">Subject</label>
+            <input id="subjectInput" type="text" placeholder="e.g. Mathematics">
+          </div>
+          <div>
+            <label for="dueInput">Due date</label>
+            <input id="dueInput" type="date">
+          </div>
+        </div>
+        <button type="submit">+ Add task</button>
+      </form>
+      <div class="list-heading">
+        <h3>My tasks</h3>
+        <select id="filterSelect" aria-label="Filter tasks">
+          <option value="all">All tasks</option>
+          <option value="pending">Pending</option>
+          <option value="completed">Completed</option>
+        </select>
+      </div>
+      <ul id="taskList" class="task-list"></ul>
+      <p id="emptyMessage" class="empty">No tasks here yet. Add your first task above!</p>
+    </section>
+
+    <section class="panel tips">
+      <p class="eyebrow">A LITTLE REMINDER</p>
+      <h2>Small steps make big progress.</h2>
+      <p>Choose your most important task and give it your attention. You can do it!</p>
+    </section>
+  </main>
+  <footer>Made for students • Student Planner</footer>
+  <script src="script.js"></script>
+</body>
+</html>
